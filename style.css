@@ -238,7 +238,7 @@ img {
 }
 .about_subtitle{
     font-size: var(--h2-font-size);
-    color: var(--first-color);
+    color: var(--white-color);
     margin-bottom: var(--mb-1);
 }
 .about_text{
