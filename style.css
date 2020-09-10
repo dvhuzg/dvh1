@@ -222,6 +222,7 @@ img {
     justify-items: center;
     row-gap: 2rem;
     text-align: center;
+    height: calc(100vh - var(--header-height));
 }
 .about_img{
     display: flex;
@@ -259,6 +260,7 @@ img {
 /*SKILLS*/
 .skills_container{
     row-gap: 2rem;
+    height: calc(100vh - var(--header-height));
 }
 .skills_subtitle{
     color: var(--white-color);
