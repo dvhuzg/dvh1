@@ -66,10 +66,10 @@
                 <div>
                     <h2 class="about_subtitle">DoHung</h2>
                     <span class="about_profession">-Cựu Thiếu Nhi-</span>
-                    <p class="about_text">Đây là 1 đoạn văn để miêu tả sơ bộ về bản thân nhưng chưa biết viết gì<br>Ngó tạm mấy cái MXH ở dưới nhé =))</p>
+                    <p class="about_text">Here is a paragraph to briefly describe myself<br>But I have nothing to say!</p>
                     <div class="about_social">
                         <a href="https://www.facebook.com/dohung.v" class="about_social-icon" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
-                        <a href="https://soundcloud.com/dohungv" class="about_social-icon" target="_blank"><i class='bx bxl-soundcloud'></i></a>
+                        <a href="https://soundcloud.com/dohungsc" class="about_social-icon" target="_blank"><i class='bx bxl-soundcloud'></i></a>
                         <a href="https://www.instagram.com/dohung.v/" class="about_social-icon" target="_blank"><i class='bx bxl-instagram' ></i></a>
                     </div>
                 </div>
@@ -89,7 +89,7 @@
                     <span class="skills_name">None (=</span>
                 </div>
                 <div class="skills_img">
-                    <img src="champion-yasuo-spirit-blossom-splash.jpg" alt="">
+                    <img src="game.jpg" alt="">
                 </div>
             </div>
         </section>
@@ -138,7 +138,7 @@
                         <img src="pkl1.1.jpg" alt="">
 
                         <div class="portfolio_link6">
-                            <a class="portfolio_link-name">Passion</a>
+                            <a class="portfolio_link-name" onclick="myFunction1()">Passion</a>
                         </div>
                     </div>
                 </div>
@@ -148,23 +148,23 @@
             <h2 class="section-title">Contact</h2>
             <div class="contact_container bd-grid">
             <div class="contact_info">
-                <h3 class="contact_subtitle">EMAIL</h3>
-                <span class="contact_text">maxsprodvh@gmail.com</span>
+                <h3 class="contact_subtitle">Email</h3>
+                <span class="contact_text">dohungdvh@gmail.com</span>
 
-                <h3 class="contact_subtitle">PHONE</h3>
+                <h3 class="contact_subtitle">Phone</h3>
                 <span class="contact_text">096764131*</span>
 
-                <h3 class="contact_subtitle">ADDRESS</h3>
+                <h3 class="contact_subtitle">Address</h3>
                 <span class="contact_text">Phố Tống</span>
             </div>
 
             <form action="" class="contact_form">
                 <div class="contact_inputs">
-                    <input type="text" placeholder="Name" class="contact_input">
-                    <input type="text" placeholder="Email" class="contact_input"> 
+                    <input type="text" placeholder="Name" class="contact_input" id="name">
+                    <input type="text" placeholder="Email" class="contact_input" id="email"> 
                 </div>
-                <textarea name="" placeholder="Cái này chỉ làm màu thôi" id="" cols="0" rows="10" class="contact_input"></textarea>
-                <input type="submit" value="Send" class="contact_button">
+                <textarea name="" placeholder="Feel free to spam =))" cols="0" rows="10" class="contact_input" id="message" ></textarea>
+                <input type="submit" class="contact_button">
             </form>
             </div>
         </section>
@@ -174,7 +174,7 @@
         <div class="footer_container bd-grid">
             <div class="footer_data">
                 <h2 class="footer_title">=))</h2>
-                <p class="footer_text">1 phiên bản kế nhiệm ngập tràn Toxic!</p>
+                <p class="footer_text">One version of successor but full of toxic!</p>
             </div>
             <div class="footer_data">
                 <h2 class="footer_title">©DoHung</h2>
@@ -184,7 +184,7 @@
                 </ul>
             </div>
             <div class="footer_data">
-                <h2 class="footer_title">Follow</h2>
+                <h2 class="footer_title">Follow me</h2>
                 <a href="https://www.pinterest.com/maxsprodvh" target="_blank" class="footer_social"><i class='bx bxl-pinterest'></i></a>
                 <a href="0967641315" class="footer_social"><i class='bx bxl-telegram' ></i></a>
                 <a href="https://www.youtube.com/channel/UCTeETsIy71WWytmu9vsu2mA?view_as=subscriber" target="_blank" class="footer_social"><i class='bx bxl-youtube' ></i></a>
@@ -196,11 +196,73 @@
     </footer>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
-    <audio src="anh khong lam gi dau anh the.mp3" autoplay="" loop=""></audio>
+    <!-- <audio src="anh khong lam gi dau anh the.mp3" autoplay="" loop=""></audio> -->
     <script>
             function myFunction() {
-                alert("Đào đâu ra =)");
-    }</script>
+                alert("Find at DVH version !");
+            }
+            function myFunction1() {
+                alert("Cycling !");
+            }
+    </script>
+
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+
+<script>
+    const form = document.querySelector('.contact_form');
+    const inputEmail = form.querySelector('#email');
+    const inputName = form.querySelector('#name');
+    const inputMessage = form.querySelector('#message');
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var config = {
+        apiKey: "AIzaSyDxnnk3fSa0Zzy0cR47m6d59G7raIoKx0k",
+        authDomain: "dvhsk-dvh1.firebaseapp.com",
+        projectId: "dvhsk-dvh1",
+        storageBucket: "dvhsk-dvh1.appspot.com",
+        messagingSenderId: "1084686152261",
+        appId: "1:1084686152261:web:5a37e8d78836d35b36a92c",
+        measurementId: "G-4Q5D4LBD09"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(config);
+    firebase.analytics();
+    //grab a form
+    
+    
+    
+    //create a functions to push
+        function firebasePush(input) {
+    
+    
+            //prevents from braking
+            if (!firebase.apps.length) {
+                firebase.initializeApp(config);
+            }
+    
+            //push itself
+            var mailsRef = firebase.database().ref('Notifications').push().set(
+                {
+                    Name: inputName.value,
+                    Email: inputEmail.value,
+                    Message: inputMessage.value
+
+                }
+            );
+        }
+    
+    //push on form submit
+        if (form) {
+            form.addEventListener('submit', function (evt) {
+                evt.preventDefault();
+                firebasePush(inputName);
+                //shows alert if everything went well.
+                return alert('OK ghi nhận !');
+            })
+        }
+    
+    </script>
 </body>
 
 </html>
