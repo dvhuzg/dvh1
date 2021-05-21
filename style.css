@@ -597,3 +597,21 @@ img {
     background-attachment: fixed;
     background-position: center;
 }
+@media (max-width: 991px)
+{
+    .portfolio_link1,
+    .portfolio_link2,
+    .portfolio_link3,
+    .portfolio_link4,
+    .portfolio_link5,
+    .portfolio_link6
+    {
+        height: 100%;
+    }  
+    .skills_img img
+    {
+        vertical-align: middle;
+        height: 268px;
+        width: 343px;
+    }
+}
