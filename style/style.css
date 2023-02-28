@@ -294,8 +294,7 @@ img {
 
 /*PORTFOLIO*/
 .portfolio{
-    /*background-color: var(--white-color);*/
-    background: url("../../media/img/champion-teemo-spirit-blossom-prestige-splash.jpg");
+    background: url("../media/img/champion-teemo-spirit-blossom-prestige-splash.jpg");
     background-attachment: fixed;
     background-position: center;
 }
@@ -460,7 +459,7 @@ img {
 }
 
 .footer{
-    background: url("../../media/img/kame.jpg");
+    background: url("../media/img/kame.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -574,24 +573,24 @@ img {
     }
 }
 .home{
-    background:url("../../media/img/Minimalistic Mountains Dark Background [1920x1080].png");
+    background:url("../media/img/Minimalistic Mountains Dark Background [1920x1080].png");
     background-size: cover;
     background-repeat: no-repeat;
 }
 .about{
-    background: url("../../media/img/65396081_631793750563383_1717164840184709120_o.jpg");
+    background: url("../media/img/65396081_631793750563383_1717164840184709120_o.jpg");
     background-attachment: fixed;
     background-position: center;
 }
 .skills{
-    background: url("../../media/img/lmht2.jpg");
+    background: url("../media/img/lmht2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
 }
 .contact{
-    background: url("../../media/img/kame.jpg");
+    background: url("../media/img/kame.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
